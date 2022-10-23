@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>replit</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<div id="welcome-screen">
+		<h3 class="text-style">Guess the number between 1 - 100</h3>
+		<img src="https://cdni.iconscout.com/illustration/premium/thumb/game-competition-winner-5659757-4720221.png"
+			alt="game-image" class="game-img">
+		<p class="text-style">Select the difficulty</p>
+		<div class="btn-wrapper">
+			<button class="btn-btn" onclick="easyMode()"><strong>Easy: 10 attempts</strong></button>
+			<br><br>
+			<button class="btn-btn" onclick="hardMode()"><strong>Hard: 5 attempts</strong></button>
+		</div>
+	</div>
+
+	<!-- 	GAME MODE  -->
+	<div id="easy-screen">
+		<div class="head-input">
+			<h2 class="text-style-easy-title" id="userResult">Your Guess</h2>
+			<input type="number" name="guess" placeholder="Enter number" id="input-number" onchange="compareGuess()">
+		</div>
+		<br><br>
+		<p class="text-style-easy">Number of previous attempts: </p>
+		<span class="text-style-easy" id="previousAttempts"></span>
+		<p class="text-style-easy">Number of previous guesses: </p>
+		<span class="text-style-easy" id="previousGuesses"></span>
+
+		<div class="newBtn">
+			<button id="newGame" onclick="restartGame()">New Game</button>
+		</div>
+	</div>
+
+	<script src="script.js"></script>
+
+	<!--
+  This script places a badge on your repl's full-browser view back to your repl's cover
+  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+  teal, blue, blurple, magenta, pink!
+  -->
+	<!-- <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script> -->
+</body>
+
+</html>
