@@ -5,7 +5,6 @@ let updateNumber = document.getElementById("input-number");
 
 const init = () => {
 	computerGuess = Math.floor(Math.random() * 100);
-	// console.log(computerGuess);
 	document.getElementById("newGame").style.display = "none";
 	document.getElementById("easy-screen").style.display = "none";
 }
